@@ -38,4 +38,25 @@ class MostRecentListProvider extends ChangeNotifier {
     }
     await share.setStringList(sharedPrefs.MostRecentPref, MostRecentList);
   }
+
+  void editMostRecentList(int index) async {
+    SharedPreferences shared = await SharedPreferences.getInstance();
+    List<String> MostRecentListasString =
+        shared.getStringList(sharedPrefs.MostRecentPref) ?? [];
+    MostRecentList =
+        MostRecentListasString.map((element) {
+          return int.parse(element);
+        }).toList();
+    for (int i = 0; i < MostRecentList.length; i++) {
+      if (MostRecentList[i] == index) {
+        MostRecentList.remove(index);
+      }
+    }
+    MostRecentList.insert(0, index);
+    MostRecentListasString = MostRecentList.map((element) {
+      return "${element}";
+    }).toList();
+    await shared.setStringList(
+        sharedPrefs.MostRecentPref, MostRecentListasString);
+  }
 }

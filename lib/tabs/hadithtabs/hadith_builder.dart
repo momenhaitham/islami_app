@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/tabs/hadithtabs/hadeeth_model.dart';
@@ -52,12 +51,10 @@ class _hadethBuilderState extends State<hadethBuilder> {
                   ),
                   Column(
                     children: [
-                      Column(
-                        children: [
-                          Image.asset(backGround.HadeethCardBG1),
-                          Image.asset(backGround.HadeethCardBG2),
-                        ],
-                      ),
+                      Image.asset(backGround.HadeethCardBG1),
+                      SizedBox(height: height * 0.066,),
+                      Image.asset(
+                        backGround.HadeethCardBG2, fit: BoxFit.fitWidth,),
                     ],
                   ),
                 ],

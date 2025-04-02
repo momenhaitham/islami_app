@@ -25,14 +25,15 @@ class TimeTab extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 320,
+          height: height * 0.34,
           margin: EdgeInsets.symmetric(horizontal: width * 0.04),
           child: Stack(
             children: [
-              Image.asset(backGround.brownBGtimetab, height: 320),
-              Image.asset(backGround.bageBGtimetab, height: 320),
+              Image.asset(backGround.brownBGtimetab, height: height * 0.34),
+              Image.asset(backGround.bageBGtimetab, height: height * 0.34),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                padding: EdgeInsets.symmetric(
+                    horizontal: width * 0.06, vertical: height * 0.02),
                 child: Column(
                   children: [
                     Row(
