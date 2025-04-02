@@ -26,6 +26,7 @@ class _mostRecentlyState extends State<mostRecently> {
     var provider = Provider.of<MostRecentListProvider>(context);
     return InkWell(
       onTap: () {
+        provider.editMostRecentList(widget.index);
         Navigator.of(
           context,
         ).pushNamed(suraview.routName, arguments: widget.index);
