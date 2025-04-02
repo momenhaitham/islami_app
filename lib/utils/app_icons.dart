@@ -11,4 +11,6 @@ class appicons {
   static String VolumeIcon = "assets/images/VolumeIcon.png";
   static String NoVolumeIcon = "assets/images/noVolumeIcon.png";
   static String PauseIcon = "assets/images/Pause.png";
+  static String EveningAzkarIcon = "assets/images/EveningAzkarIcon.png";
+  static String MorningAzkarIcon = "assets/images/MorningAzkarIcon.png";
 }

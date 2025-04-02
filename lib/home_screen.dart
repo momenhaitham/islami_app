@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/introbuilder.dart';
 import 'package:islami_app/tabs/hadithtabs/hadith_tab.dart';
 import 'package:islami_app/tabs/qurantabs/quran_tab.dart';
 import 'package:islami_app/tabs/radiotabs/radiotab.dart';
 import 'package:islami_app/tabs/sebhatabs/sebha_tab.dart';
+import 'package:islami_app/tabs/timetabs/time_tab.dart';
 import 'package:islami_app/utils/app_backgrounds.dart';
 import 'package:islami_app/utils/app_colors.dart';
 import 'package:islami_app/utils/app_icons.dart';
@@ -31,7 +31,8 @@ class _homeScreenState extends State<homeScreen> {
     quranTab(),
     hadithTab(),
     sebhatab(),
-    radiotab()
+    radiotab(),
+    TimeTab()
   ];
 
   @override
@@ -97,6 +98,7 @@ class _homeScreenState extends State<homeScreen> {
               label: "Time",
             )
           ],
+            showUnselectedLabels: false,
             currentIndex: selectedItem,
             onTap: (index) {
               selectedItem = index;

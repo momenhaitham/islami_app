@@ -29,7 +29,7 @@ class _mostRecentlyState extends State<mostRecently> {
       },
       child: Container(
         height: height * 0.16,
-        width: width * 0.74,
+        width: width * 0.80,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           color: appColors.PrimaryColor,

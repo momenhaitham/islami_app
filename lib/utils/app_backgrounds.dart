@@ -12,4 +12,7 @@ class backGround {
   static String sebha = "assets/images/sebha.png";
   static String RadioBGoff = "assets/images/RadioBGoff.png";
   static String RadioBGon = "assets/images/RadioBGon.png";
+  static String brownBGtimetab = "assets/images/brownBGtimetab.png";
+  static String bageBGtimetab = "assets/images/bageBGtimetab.png";
+  static String PrayerTimeBG = "assets/images/PrayerTimeBG.png";
 }
