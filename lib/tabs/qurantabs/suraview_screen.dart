@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/tabs/qurantabs/surasdetails.dart';
-import 'package:islami_app/tabs/qurantabs/mostrecently_part_builder.dart';
 import 'package:islami_app/utils/app_colors.dart';
 import 'package:islami_app/utils/app_styles.dart';
-import 'package:islami_app/utils/app_theme.dart';
-import 'package:islami_app/utils/shared_pref_utils.dart';
 import 'package:provider/provider.dart';
 
 import '../../providers/provider.dart';
@@ -28,7 +25,6 @@ class _suraviewState extends State<suraview> {
     var height = MediaQuery.of(context).size.height;
     var index = ModalRoute.of(context)?.settings.arguments as int;
     provider = Provider.of<MostRecentListProvider>(context);
-
     if (SuraContent.isEmpty) {
       loadcontentfromfile(index);
     }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/providers/provider.dart';
 import 'package:islami_app/tabs/qurantabs/suraview_screen.dart';
 import 'package:islami_app/utils/app_colors.dart';
 import 'package:islami_app/utils/app_icons.dart';
 import 'package:islami_app/utils/app_styles.dart';
+import 'package:provider/provider.dart';
 
 class mostRecently extends StatefulWidget {
   String suraNameAR;
@@ -21,6 +23,7 @@ class _mostRecentlyState extends State<mostRecently> {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
+    var provider = Provider.of<MostRecentListProvider>(context);
     return InkWell(
       onTap: () {
         Navigator.of(
