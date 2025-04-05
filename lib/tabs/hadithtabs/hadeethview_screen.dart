@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:islami_app/tabs/hadithtabs/hadeeth_model.dart';
-import 'package:islami_app/tabs/qurantabs/surasdetails.dart';
 import 'package:islami_app/utils/app_colors.dart';
 import 'package:islami_app/utils/app_styles.dart';
-import 'package:islami_app/utils/app_theme.dart';
-import 'package:islami_app/utils/shared_pref_utils.dart';
 
 class Hadeethview extends StatefulWidget {
   static const String routName = "Hadeethview";
@@ -42,19 +38,26 @@ class _suraviewState extends State<Hadeethview> {
       ),
       body: Column(
         children: [
-          Row(
+          Stack(
             children: [
-              Container(
-                child: Image.asset("assets/images/Mask group.png"),
-                margin: EdgeInsets.only(left: width * 0.02),
+              Row(
+                children: [
+                  Container(
+                    child: Image.asset("assets/images/Mask group.png"),
+                    margin: EdgeInsets.only(left: width * 0.02),
+                  ),
+                  Container(
+                    child: Image.asset("assets/images/Mask group2.png"),
+                    margin: EdgeInsets.only(right: width * 0.02),
+                  ),
+                ],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
               ),
-              Text(HadeethDetails.HedeethTitle, style: appStyles.bold24Priamry),
               Container(
-                child: Image.asset("assets/images/Mask group2.png"),
-                margin: EdgeInsets.only(right: width * 0.02),
-              ),
+                  height: height * 0.094,
+                  child: Center(child: Text(HadeethDetails.HedeethTitle,
+                      style: appStyles.bold24Priamry),))
             ],
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
           ),
 
           Expanded(

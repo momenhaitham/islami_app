@@ -31,7 +31,8 @@ class _hadethBuilderState extends State<hadethBuilder> {
     return InkWell(
       child: Container(
         width: width * 80,
-        margin: EdgeInsets.only(bottom: 5, left: 7, right: 7),
+        height: height * 70,
+        margin: EdgeInsets.only(bottom: 10, left: 7, right: 7),
         padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
         decoration: BoxDecoration(
           color: appColors.PrimaryColor,
@@ -49,13 +50,17 @@ class _hadethBuilderState extends State<hadethBuilder> {
                       Image.asset(backGround.HadeethCardCornerR),
                     ],
                   ),
-                  Column(
-                    children: [
-                      Image.asset(backGround.HadeethCardBG1),
-                      SizedBox(height: height * 0.066,),
-                      Image.asset(
-                        backGround.HadeethCardBG2, fit: BoxFit.fitWidth,),
-                    ],
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Image.asset(backGround.HadeethCardBG1),
+                        Spacer(),
+                        Image.asset(
+                          backGround.HadeethCardBG2,
+                          fit: BoxFit.fill,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
